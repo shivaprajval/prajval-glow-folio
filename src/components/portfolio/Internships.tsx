@@ -5,40 +5,41 @@ import { SectionHeader } from "./About";
 const internships = [
   {
     title: "AWS Data Engineering Virtual Internship",
-    org: "AWS Academy",
+    org: "EduSkills",
     Icon: Cloud,
     color: "#f59e0b",
     desc: "Explored data engineering fundamentals on AWS — storage, pipelines, and analytics workflows in a virtual program.",
+    href: "#",
   },
   {
     title: "Google AI-ML Virtual Internship",
-    org: "Google for Developers",
+    org: "EduSkills",
     Icon: Brain,
     color: "#3b82f6",
     desc: "Introduced to core AI and Machine Learning concepts, model lifecycles, and Google's ML toolset.",
+    href: "#",
   },
   {
     title: "Full Stack Java Internship",
-    org: "Industry Training",
+    org: "SkillDzire",
     Icon: Code2,
     color: "#8b5cf6",
     desc: "Hands-on Java-based full stack training covering backend fundamentals and integration with web frontends.",
+    href: "#",
   },
 ];
 
 export function Internships() {
   return (
     <section id="internships" className="relative px-5 py-24 sm:px-8">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <SectionHeader eyebrow="Internships" title="Where I've trained" />
         <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-white/60">
           Virtual internships and training programs — separate from my project stacks and core
           skills.
         </p>
 
-        <div className="relative mt-14">
-          <div className="absolute top-0 bottom-0 left-4 w-px bg-gradient-to-b from-[#3b82f6] via-[#8b5cf6] to-[#ec4899] md:left-1/2" />
-
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
           {internships.map((it, i) => (
             <motion.div
               key={it.title}
@@ -46,39 +47,42 @@ export function Internships() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className={`relative mb-10 grid items-center gap-4 pl-12 md:grid-cols-2 md:pl-0 ${
-                i % 2 === 0 ? "md:pr-[calc(50%+2rem)]" : "md:pl-[calc(50%+2rem)] md:[&>*]:col-start-2"
-              }`}
+              whileHover={{ y: -8 }}
+              className="group relative overflow-hidden rounded-3xl glass-strong p-7 transition-all"
+              style={{ boxShadow: `0 20px 50px -30px ${it.color}88` }}
             >
-              <span
-                className="absolute top-6 left-[9px] grid h-4 w-4 -translate-x-1/2 place-items-center rounded-full ring-4 ring-[#050816] md:left-1/2"
+              <div
+                className="pointer-events-none absolute -top-20 -right-20 h-48 w-48 rounded-full opacity-20 blur-3xl transition-opacity group-hover:opacity-40"
                 style={{ background: it.color }}
               />
-              <div className="rounded-3xl glass-strong p-6 transition-all hover:-translate-y-1 hover:bg-white/[0.08]">
-                <div className="flex items-start gap-4">
-                  <span
-                    className="grid h-12 w-12 shrink-0 place-items-center rounded-xl"
-                    style={{
-                      background: `${it.color}22`,
-                      boxShadow: `0 0 20px ${it.color}55`,
-                    }}
-                  >
-                    <it.Icon size={22} style={{ color: it.color }} />
-                  </span>
-                  <div className="min-w-0">
-                    <div className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider text-white/50 uppercase">
-                      <Briefcase size={12} /> Internship
-                    </div>
-                    <h3 className="mt-1 font-display text-lg font-bold leading-tight">
-                      {it.title}
-                    </h3>
-                    <div className="text-sm font-medium" style={{ color: it.color }}>
-                      {it.org}
-                    </div>
-                    <p className="mt-2 text-sm text-white/70 leading-relaxed">{it.desc}</p>
-                  </div>
+              <div className="flex items-center gap-3">
+                <span
+                  className="grid h-12 w-12 place-items-center rounded-xl"
+                  style={{
+                    background: `${it.color}22`,
+                    boxShadow: `0 0 20px ${it.color}55`,
+                  }}
+                >
+                  <it.Icon size={22} style={{ color: it.color }} />
+                </span>
+                <div className="inline-flex items-center gap-1.5 rounded-full glass px-3 py-1 text-[10px] font-bold tracking-widest text-white/70 uppercase">
+                  <Briefcase size={11} /> Internship
                 </div>
               </div>
+              <h3 className="mt-5 font-display text-xl font-bold leading-tight">{it.title}</h3>
+              <div className="mt-1 text-xs font-medium" style={{ color: it.color }}>
+                {it.org}
+              </div>
+              <p className="mt-3 text-sm text-white/70 leading-relaxed">{it.desc}</p>
+              <a
+                href={it.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-xs font-semibold transition-transform group-hover:translate-x-1"
+                style={{ color: it.color }}
+              >
+                View Certificate →
+              </a>
             </motion.div>
           ))}
         </div>

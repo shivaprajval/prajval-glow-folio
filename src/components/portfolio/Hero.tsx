@@ -1,39 +1,5 @@
-import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
-
-const ROLES = ["Software Developer", "Java Developer", "Frontend Developer", "Problem Solver"];
-
-function Typewriter() {
-  const [idx, setIdx] = useState(0);
-  const [text, setText] = useState("");
-  const [del, setDel] = useState(false);
-
-  useEffect(() => {
-    const current = ROLES[idx];
-    const speed = del ? 50 : 100;
-    const timer = setTimeout(() => {
-      if (!del && text === current) {
-        setTimeout(() => setDel(true), 1400);
-        return;
-      }
-      if (del && text === "") {
-        setDel(false);
-        setIdx((i) => (i + 1) % ROLES.length);
-        return;
-      }
-      setText(del ? current.slice(0, text.length - 1) : current.slice(0, text.length + 1));
-    }, speed);
-    return () => clearTimeout(timer);
-  }, [text, del, idx]);
-
-  return (
-    <span className="text-gradient-cyan">
-      {text}
-      <span className="animate-blink ml-1 inline-block h-[1em] w-[2px] translate-y-1 bg-[#06b6d4]" />
-    </span>
-  );
-}
 
 export function Hero() {
   return (
@@ -74,7 +40,7 @@ export function Hero() {
             transition={{ delay: 0.3 }}
             className="mt-5 text-xl font-semibold sm:text-3xl"
           >
-            <Typewriter />
+            <span className="text-gradient-cyan">Software Developer</span>
           </motion.h2>
 
           <motion.p

@@ -39,9 +39,9 @@ export function Contact() {
 
             <div className="mt-6 space-y-4">
               {[
-                { Icon: Mail, label: "Email", value: "shivaprajval@example.com", color: "#3b82f6" },
-                { Icon: Phone, label: "Phone", value: "Available on request", color: "#8b5cf6" },
-                { Icon: MapPin, label: "Location", value: "India", color: "#ec4899" },
+                { Icon: Mail, label: "Email", value: "shivaprajval10@gmail.com", color: "#3b82f6" },
+                { Icon: Phone, label: "Phone", value: "+91 94418 27639", color: "#8b5cf6" },
+                { Icon: MapPin, label: "Location", value: "Puttaparthi, Sri Sathya Sai (dist)", color: "#ec4899" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-3">
                   <span
@@ -68,7 +68,6 @@ export function Contact() {
                 {[
                   { Icon: Linkedin, href: "https://linkedin.com" },
                   { Icon: Github, href: "https://github.com" },
-                  { Icon: Mail, href: "mailto:shivaprajval@example.com" },
                 ].map(({ Icon, href }, i) => (
                   <a
                     key={i}
