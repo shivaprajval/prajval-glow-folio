@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
 import { Award, Globe, Code2, Coffee } from "lucide-react";
 import { SectionHeader } from "./About";
+import rwdCert from "@/assets/certs/responsive_webdesign.pdf.asset.json";
+import jsCert from "@/assets/certs/javascript_essentials.pdf.asset.json";
+import javaCert from "@/assets/certs/basics_of_java.pdf.asset.json";
 
 const certs = [
   {
@@ -9,6 +12,7 @@ const certs = [
     Icon: Globe,
     color: "#06b6d4",
     desc: "Modern responsive layouts, CSS techniques, accessibility, and mobile-first design.",
+    href: rwdCert.url,
   },
   {
     title: "JavaScript Essentials",
@@ -16,6 +20,7 @@ const certs = [
     Icon: Code2,
     color: "#f7df1e",
     desc: "Fundamentals of JavaScript: variables, control flow, functions, objects, and the DOM.",
+    href: jsCert.url,
   },
   {
     title: "Basics of Java",
@@ -23,6 +28,7 @@ const certs = [
     Icon: Coffee,
     color: "#f89820",
     desc: "OOP fundamentals, syntax, control structures, and Java program structure.",
+    href: javaCert.url,
   },
 ];
 
@@ -70,12 +76,15 @@ export function Certifications() {
                 {c.issuer}
               </div>
               <p className="mt-3 text-sm text-white/70 leading-relaxed">{c.desc}</p>
-              <div
+              <a
+                href={c.href}
+                target="_blank"
+                rel="noreferrer"
                 className="mt-6 inline-flex items-center gap-2 text-xs font-semibold transition-transform group-hover:translate-x-1"
                 style={{ color: c.color }}
               >
                 View Certificate →
-              </div>
+              </a>
             </motion.div>
           ))}
         </div>

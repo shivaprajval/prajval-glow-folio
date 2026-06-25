@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
 import { Briefcase, Cloud, Brain, Code2 } from "lucide-react";
 import { SectionHeader } from "./About";
+import awsCert from "@/assets/certs/aws_data_engineering_internship.pdf.asset.json";
+import googleCert from "@/assets/certs/google_ai_ml_internship.pdf.asset.json";
+import fsJavaCert from "@/assets/certs/full_stack_java_internship.pdf.asset.json";
 
 const internships = [
   {
@@ -9,7 +12,7 @@ const internships = [
     Icon: Cloud,
     color: "#f59e0b",
     desc: "Explored data engineering fundamentals on AWS — storage, pipelines, and analytics workflows in a virtual program.",
-    href: "#",
+    href: awsCert.url,
   },
   {
     title: "Google AI-ML Virtual Internship",
@@ -17,7 +20,7 @@ const internships = [
     Icon: Brain,
     color: "#3b82f6",
     desc: "Introduced to core AI and Machine Learning concepts, model lifecycles, and Google's ML toolset.",
-    href: "#",
+    href: googleCert.url,
   },
   {
     title: "Full Stack Java Internship",
@@ -25,7 +28,7 @@ const internships = [
     Icon: Code2,
     color: "#8b5cf6",
     desc: "Hands-on Java-based full stack training covering backend fundamentals and integration with web frontends.",
-    href: "#",
+    href: fsJavaCert.url,
   },
 ];
 
