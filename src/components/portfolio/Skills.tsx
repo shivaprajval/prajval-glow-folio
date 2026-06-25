@@ -4,11 +4,11 @@ import { FaJava, FaHtml5, FaCss3Alt, FaJsSquare, FaDatabase } from "react-icons/
 import { SectionHeader } from "./About";
 
 const SKILLS = [
-  { name: "Java", level: 75, color: "#f89820", Icon: FaJava, note: "Working Knowledge" },
-  { name: "SQL", level: 65, color: "#22c55e", Icon: FaDatabase, note: "Fundamentals & basic queries" },
-  { name: "HTML", level: 90, color: "#e34c26", Icon: FaHtml5, note: "Semantic & accessible" },
-  { name: "CSS", level: 85, color: "#3b82f6", Icon: FaCss3Alt, note: "Responsive & modern" },
-  { name: "JavaScript", level: 80, color: "#f7df1e", Icon: FaJsSquare, note: "ES6+ & DOM" },
+  { name: "Java", level: 60, color: "#f89820", Icon: FaJava, note: "Working Knowledge" },
+  { name: "SQL", level: 55, color: "#22c55e", Icon: FaDatabase, note: "Fundamentals & basic queries" },
+  { name: "HTML", level: 65, color: "#e34c26", Icon: FaHtml5, note: "Foundational knowledge" },
+  { name: "CSS", level: 60, color: "#3b82f6", Icon: FaCss3Alt, note: "Foundational knowledge" },
+  { name: "JavaScript", level: 50, color: "#f7df1e", Icon: FaJsSquare, note: "Foundational knowledge" },
 ];
 
 function CircularProgress({ value, color }: { value: number; color: string }) {
