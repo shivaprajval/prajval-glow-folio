@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { Briefcase, Cloud, Brain, Code2 } from "lucide-react";
 import { SectionHeader } from "./About";
 
-const awsCert = { url: "/certs/aws_data_engineering_internship.pdf" };
-const googleCert = { url: "/certs/google_ai_ml_internship.pdf" };
-const fsJavaCert = { url: "/certs/full_stack_java_internship.pdf" };
+import awsCert from "@/assets/certs/aws_data_engineering_internship.pdf.asset.json";
+import googleCert from "@/assets/certs/google_ai_ml_internship.pdf.asset.json";
+import fsJavaCert from "@/assets/certs/full_stack_java_internship.pdf.asset.json";
 
 const internships = [
   {
