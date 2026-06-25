@@ -35,22 +35,22 @@ const stats = [
 
 const education = [
   {
-    period: "2021 — 2025",
-    title: "B.E. in Computer Science Engineering",
-    place: "Engineering College",
-    desc: "Focused on data structures, web development, databases, and software engineering fundamentals.",
+    period: "2022 — 2026",
+    title: "Bachelor of Technology (CSE)",
+    place: "Sanskrithi School Of Engineering, Puttaparthi",
+    desc: "CGPA: 79% — Specialization in Computer Science Engineering with focus on software development, databases, and web technologies.",
   },
   {
-    period: "2019 — 2021",
-    title: "Pre-University Education",
-    place: "MPC Stream",
-    desc: "Built strong foundations in mathematics and analytical reasoning.",
+    period: "2020 — 2022",
+    title: "Board of Intermediate Education (MPC)",
+    place: "Mangalakara Junior College, Jagarajupalli",
+    desc: "CGPA: 80% — Mathematics, Physics, and Chemistry stream.",
   },
   {
-    period: "Until 2019",
-    title: "Secondary Schooling",
-    place: "State Board",
-    desc: "Graduated with distinction; first introduction to programming.",
+    period: "2019 — 2020",
+    title: "Board of Secondary Education, Andhra Pradesh",
+    place: "SSS English Medium High School, Puttaparthi",
+    desc: "CGPA: 98% — Graduated with distinction.",
   },
 ];
 
