@@ -68,7 +68,6 @@ export function Contact() {
                 {[
                   { Icon: Linkedin, href: "https://linkedin.com" },
                   { Icon: Github, href: "https://github.com" },
-                  { Icon: Mail, href: "mailto:shivaprajval@example.com" },
                 ].map(({ Icon, href }, i) => (
                   <a
                     key={i}
