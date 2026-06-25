@@ -40,7 +40,7 @@ export function Hero() {
             transition={{ delay: 0.3 }}
             className="mt-5 text-xl font-semibold sm:text-3xl"
           >
-            <Typewriter />
+            <span className="text-gradient-cyan">Software Developer</span>
           </motion.h2>
 
           <motion.p
