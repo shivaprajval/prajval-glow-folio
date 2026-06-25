@@ -2,9 +2,13 @@ import { motion } from "motion/react";
 import { Award, Globe, Code2, Coffee } from "lucide-react";
 import { SectionHeader } from "./About";
 
-const rwdCert = { url: "/api/docs/responsive-web-design.pdf" };
-const jsCert = { url: "/api/docs/javascript-essentials.pdf" };
-const javaCert = { url: "/api/docs/basics-of-java.pdf" };
+import rwdUrl from "@/assets/certs/responsive_webdesign.pdf?url";
+import jsUrl from "@/assets/certs/javascript_essentials.pdf?url";
+import javaUrl from "@/assets/certs/basics_of_java.pdf?url";
+
+const rwdCert = { url: rwdUrl };
+const jsCert = { url: jsUrl };
+const javaCert = { url: javaUrl };
 
 const certs = [
   {
