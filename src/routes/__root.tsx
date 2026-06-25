@@ -77,20 +77,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Eediga Shiva Prajval — Software Developer Portfolio" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Eediga Shiva Prajval, Computer Science Engineering graduate and aspiring Software Developer. Java, web development, and frontend projects.",
+      },
+      { name: "author", content: "Eediga Shiva Prajval" },
+      { property: "og:title", content: "Eediga Shiva Prajval — Software Developer" },
+      {
+        property: "og:description",
+        content:
+          "CSE graduate. Java, SQL, HTML, CSS, JavaScript. Frontend projects, internships, and certifications.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap",
       },
+      { rel: "stylesheet", href: appCss },
     ],
   }),
   shellComponent: RootShell,
