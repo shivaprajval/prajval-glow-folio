@@ -66,7 +66,7 @@ export function Contact() {
               </div>
               <div className="mt-3 flex gap-3">
                 {[
-                  { Icon: Linkedin, href: "https://linkedin.com/in/eediga-shiva-prajval-417b97382" },
+                  { Icon: Linkedin, href: "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382" },
                   { Icon: Github, href: "https://github.com/shivaprajval" },
                 ].map(({ Icon, href }, i) => (
                   <a
