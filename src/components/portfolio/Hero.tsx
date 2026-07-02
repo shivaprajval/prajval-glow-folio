@@ -61,7 +61,7 @@ export function Hero() {
             className="mt-8 flex flex-wrap items-center gap-4"
           >
             <a
-              href="https://drive.google.com/uc?export=download&id=1-Q_hoNJoltgngp0DCAkPdn3CTtk_IpFJ"
+              href="https://drive.google.com/file/d/1-Q_hoNJoltgngp0DCAkPdn3CTtk_IpFJ/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-2 rounded-full btn-gradient px-6 py-3 font-semibold text-white"
