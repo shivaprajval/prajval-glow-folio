@@ -85,9 +85,8 @@ export function Hero() {
             className="mt-8 flex items-center gap-3"
           >
             {[
-              { Icon: Linkedin, href: "https://linkedin.com/in/eediga-shiva-prajval-417b97382", label: "LinkedIn" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382", label: "LinkedIn" },
               { Icon: Github, href: "https://github.com/shivaprajval", label: "GitHub" },
-              { Icon: Mail, href: "mailto:shivaprajval10@gmail.com", label: "Email" },
             ].map(({ Icon, href, label }) => (
               <a
                 key={label}
