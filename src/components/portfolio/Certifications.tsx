@@ -2,38 +2,30 @@ import { motion } from "motion/react";
 import { Award, Globe, Code2, Coffee } from "lucide-react";
 import { SectionHeader } from "./About";
 
-import rwdUrl from "@/assets/certs/responsive_webdesign.pdf?url";
-import jsUrl from "@/assets/certs/javascript_essentials.pdf?url";
-import javaUrl from "@/assets/certs/basics_of_java.pdf?url";
-
-const rwdCert = { url: rwdUrl };
-const jsCert = { url: jsUrl };
-const javaCert = { url: javaUrl };
-
 const certs = [
   {
     title: "Responsive Web Design",
-    issuer: "Online Certification",
+    issuer: "freeCodeCamp",
     Icon: Globe,
     color: "#06b6d4",
     desc: "Modern responsive layouts, CSS techniques, accessibility, and mobile-first design.",
-    href: rwdCert.url,
+    href: "https://drive.google.com/file/d/12k3ZJwowrhpZpf6YR4PuHltcMHKXFD_i/view?usp=sharing",
   },
   {
     title: "JavaScript Essentials",
-    issuer: "Online Certification",
+    issuer: "Cisco Networking Academy",
     Icon: Code2,
     color: "#f7df1e",
     desc: "Fundamentals of JavaScript: variables, control flow, functions, objects, and the DOM.",
-    href: jsCert.url,
+    href: "https://drive.google.com/file/d/1TIh8fndISnJ6Q8NWLmQqesptHBbqmTlw/view?usp=sharing",
   },
   {
     title: "Basics of Java",
-    issuer: "Online Certification",
+    issuer: "Infosys Springboard",
     Icon: Coffee,
     color: "#f89820",
     desc: "OOP fundamentals, syntax, control structures, and Java program structure.",
-    href: javaCert.url,
+    href: "https://drive.google.com/file/d/14WeW_geit07HPF5wuJvB6TBgrAIDGshj/view?usp=sharing",
   },
 ];
 
