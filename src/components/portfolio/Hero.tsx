@@ -61,7 +61,7 @@ export function Hero() {
             className="mt-8 flex flex-wrap items-center gap-4"
           >
             <a
-              href="https://drive.google.com/uc?export=download&id=123acbuX-9fme0igvZ6Wkiu4eYBmSdbRk"
+              href="https://drive.google.com/uc?export=download&id=1-Q_hoNJoltgngp0DCAkPdn3CTtk_IpFJ"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-2 rounded-full btn-gradient px-6 py-3 font-semibold text-white"
@@ -85,7 +85,7 @@ export function Hero() {
             className="mt-8 flex items-center gap-3"
           >
             {[
-              { Icon: Linkedin, href: "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382", label: "LinkedIn" },
+              { Icon: Linkedin, href: "https://linkedin.com/in/eediga-shiva-prajval-417b97382", label: "LinkedIn" },
               { Icon: Github, href: "https://github.com/shivaprajval", label: "GitHub" },
               { Icon: Mail, href: "mailto:shivaprajval10@gmail.com", label: "Email" },
             ].map(({ Icon, href, label }) => (
