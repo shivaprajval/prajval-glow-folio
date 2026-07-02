@@ -1,9 +1,13 @@
 import { motion } from "motion/react";
 import { Github, ExternalLink, Users, User } from "lucide-react";
 import { SectionHeader } from "./About";
-import chatbotImg from "@/assets/project-chatbot.jpg";
-import carpoolImg from "@/assets/project-carpool.jpg";
-import streamhubImg from "@/assets/project-streamhub.jpg";
+import chatbotAsset from "@/assets/project-chatbot-ui.png.asset.json";
+import carpoolAsset from "@/assets/project-carpool-ui.png.asset.json";
+import streamhubAsset from "@/assets/project-streamhub-ui.png.asset.json";
+
+const chatbotImg = chatbotAsset.url;
+const carpoolImg = carpoolAsset.url;
+const streamhubImg = streamhubAsset.url;
 
 type Project = {
   title: string;
@@ -31,7 +35,7 @@ const projects: Project[] = [
       "Responsive chat layout",
     ],
     image: chatbotImg,
-    github: "https://github.com",
+    github: "https://github.com/shivaprajval/college-chatbot",
     accent: "#3b82f6",
   },
   {
@@ -47,7 +51,7 @@ const projects: Project[] = [
       "Token-based session handling",
     ],
     image: carpoolImg,
-    github: "https://github.com",
+    github: "https://github.com/shivaprajval/carpool",
     accent: "#8b5cf6",
   },
   {
@@ -63,7 +67,7 @@ const projects: Project[] = [
       "Smooth route transitions",
     ],
     image: streamhubImg,
-    github: "https://github.com",
+    github: "https://github.com/shivaprajval/StreamHub",
     accent: "#ec4899",
   },
 ];
