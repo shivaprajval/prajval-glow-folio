@@ -1,8 +1,19 @@
+import type { MouseEvent } from "react";
 import { motion } from "motion/react";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382/";
 const GITHUB_URL = "https://github.com/shivaprajval";
+
+function redirectToLinkedIn(event: MouseEvent<HTMLAnchorElement>) {
+  event.preventDefault();
+
+  try {
+    window.top?.location.assign(LINKEDIN_URL);
+  } catch {
+    window.open(LINKEDIN_URL, "_blank", "noopener,noreferrer");
+  }
+}
 
 export function Hero() {
   return (
@@ -97,6 +108,7 @@ export function Hero() {
                 target={target}
                 rel="noopener noreferrer"
                 aria-label={label}
+                onClick={label === "LinkedIn" ? redirectToLinkedIn : undefined}
                 className="group grid h-11 w-11 place-items-center rounded-full glass transition-all hover:scale-110 hover:bg-white/10 neon-glow"
               >
                 <Icon size={18} className="text-white/80 group-hover:text-white" />
