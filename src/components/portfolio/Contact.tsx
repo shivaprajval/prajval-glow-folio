@@ -6,10 +6,6 @@ import { SectionHeader } from "./About";
 const LINKEDIN_URL = "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382/";
 const GITHUB_URL = "https://github.com/shivaprajval";
 
-function openExternalUrl(url: string) {
-  window.open(url, "_blank", "noopener,noreferrer");
-}
-
 export function Contact() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -73,18 +69,14 @@ export function Contact() {
               </div>
               <div className="mt-3 flex gap-3">
                 {[
-                  { Icon: Linkedin, href: LINKEDIN_URL },
-                  { Icon: Github, href: GITHUB_URL },
-                ].map(({ Icon, href }, i) => (
+                  { Icon: Linkedin, href: LINKEDIN_URL, target: "_top" },
+                  { Icon: Github, href: GITHUB_URL, target: "_blank" },
+                ].map(({ Icon, href, target }, i) => (
                   <a
                     key={i}
                     href={href}
-                    target="_blank"
+                    target={target}
                     rel="noopener noreferrer"
-                    onClick={(event) => {
-                      event.preventDefault();
-                      openExternalUrl(href);
-                    }}
                     className="grid h-11 w-11 place-items-center rounded-xl glass transition-all hover:-translate-y-1 hover:bg-white/10"
                   >
                     <Icon size={17} />

@@ -4,10 +4,6 @@ import { Download, Mail, Github, Linkedin } from "lucide-react";
 const LINKEDIN_URL = "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382/";
 const GITHUB_URL = "https://github.com/shivaprajval";
 
-function openExternalUrl(url: string) {
-  window.open(url, "_blank", "noopener,noreferrer");
-}
-
 export function Hero() {
   return (
     <section
@@ -92,19 +88,15 @@ export function Hero() {
             className="mt-8 flex items-center gap-3"
           >
             {[
-              { Icon: Linkedin, href: LINKEDIN_URL, label: "LinkedIn" },
-              { Icon: Github, href: GITHUB_URL, label: "GitHub" },
-            ].map(({ Icon, href, label }) => (
+              { Icon: Linkedin, href: LINKEDIN_URL, label: "LinkedIn", target: "_top" },
+              { Icon: Github, href: GITHUB_URL, label: "GitHub", target: "_blank" },
+            ].map(({ Icon, href, label, target }) => (
               <a
                 key={label}
                 href={href}
-                target="_blank"
+                target={target}
                 rel="noopener noreferrer"
                 aria-label={label}
-                onClick={(event) => {
-                  event.preventDefault();
-                  openExternalUrl(href);
-                }}
                 className="group grid h-11 w-11 place-items-center rounded-full glass transition-all hover:scale-110 hover:bg-white/10 neon-glow"
               >
                 <Icon size={18} className="text-white/80 group-hover:text-white" />
