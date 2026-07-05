@@ -1,19 +1,8 @@
-import type { MouseEvent } from "react";
 import { motion } from "motion/react";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
 
-const LINKEDIN_URL = "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382/";
+const LINKEDIN_URL = "https://linkedin.com";
 const GITHUB_URL = "https://github.com/shivaprajval";
-
-function openLinkedIn(event: MouseEvent<HTMLAnchorElement>) {
-  event.preventDefault();
-
-  const linkedInWindow = window.open(LINKEDIN_URL, "_blank", "noopener,noreferrer");
-
-  if (!linkedInWindow) {
-    window.location.href = LINKEDIN_URL;
-  }
-}
 
 export function Hero() {
   return (
@@ -98,22 +87,24 @@ export function Hero() {
             transition={{ delay: 0.7 }}
             className="mt-8 flex items-center gap-3"
           >
-            {[
-              { Icon: Linkedin, href: LINKEDIN_URL, label: "LinkedIn", target: "_blank" },
-              { Icon: Github, href: GITHUB_URL, label: "GitHub", target: "_blank" },
-            ].map(({ Icon, href, label, target }) => (
-              <a
-                key={label}
-                href={href}
-                target={target}
-                rel="noopener noreferrer"
-                aria-label={label}
-                onClick={label === "LinkedIn" ? openLinkedIn : undefined}
-                className="group grid h-11 w-11 place-items-center rounded-full glass transition-all hover:scale-110 hover:bg-white/10 neon-glow"
-              >
-                <Icon size={18} className="text-white/80 group-hover:text-white" />
-              </a>
-            ))}
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex h-11 items-center gap-2 rounded-full glass px-5 text-sm font-semibold text-white/85 transition-all hover:-translate-y-0.5 hover:bg-white/10 hover:text-white neon-glow"
+            >
+              <Linkedin size={18} className="text-[#0a66c2]" />
+              Connect on LinkedIn
+            </a>
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="group grid h-11 w-11 place-items-center rounded-full glass transition-all hover:scale-110 hover:bg-white/10 neon-glow"
+            >
+              <Github size={18} className="text-white/80 group-hover:text-white" />
+            </a>
           </motion.div>
         </div>
 
