@@ -1,10 +1,20 @@
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type MouseEvent } from "react";
 import { motion } from "motion/react";
 import { Send, Mail, MapPin, Phone, Github, Linkedin, Check } from "lucide-react";
 import { SectionHeader } from "./About";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382/";
 const GITHUB_URL = "https://github.com/shivaprajval";
+
+function openLinkedIn(event: MouseEvent<HTMLAnchorElement>) {
+  event.preventDefault();
+
+  const linkedInWindow = window.open(LINKEDIN_URL, "_blank", "noopener,noreferrer");
+
+  if (!linkedInWindow) {
+    window.location.href = LINKEDIN_URL;
+  }
+}
 
 export function Contact() {
   const [sent, setSent] = useState(false);
@@ -77,6 +87,7 @@ export function Contact() {
                     href={href}
                     target={target}
                     rel="noopener noreferrer"
+                    onClick={href === LINKEDIN_URL ? openLinkedIn : undefined}
                     className="grid h-11 w-11 place-items-center rounded-xl glass transition-all hover:-translate-y-1 hover:bg-white/10"
                   >
                     <Icon size={17} />
