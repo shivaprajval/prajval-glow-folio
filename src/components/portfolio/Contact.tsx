@@ -1,20 +1,10 @@
-import { useState, type FormEvent, type MouseEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { motion } from "motion/react";
 import { Send, Mail, MapPin, Phone, Github, Linkedin, Check } from "lucide-react";
 import { SectionHeader } from "./About";
 
-const LINKEDIN_URL = "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382/";
+const LINKEDIN_URL = "https://linkedin.com";
 const GITHUB_URL = "https://github.com/shivaprajval";
-
-function openLinkedIn(event: MouseEvent<HTMLAnchorElement>) {
-  event.preventDefault();
-
-  const linkedInWindow = window.open(LINKEDIN_URL, "_blank", "noopener,noreferrer");
-
-  if (!linkedInWindow) {
-    window.location.href = LINKEDIN_URL;
-  }
-}
 
 export function Contact() {
   const [sent, setSent] = useState(false);
@@ -77,22 +67,25 @@ export function Contact() {
               <div className="text-xs font-bold tracking-wider text-white/50 uppercase">
                 Find me online
               </div>
-              <div className="mt-3 flex gap-3">
-                {[
-                  { Icon: Linkedin, href: LINKEDIN_URL, target: "_blank" },
-                  { Icon: Github, href: GITHUB_URL, target: "_blank" },
-                ].map(({ Icon, href, target }, i) => (
-                  <a
-                    key={i}
-                    href={href}
-                    target={target}
-                    rel="noopener noreferrer"
-                    onClick={href === LINKEDIN_URL ? openLinkedIn : undefined}
-                    className="grid h-11 w-11 place-items-center rounded-xl glass transition-all hover:-translate-y-1 hover:bg-white/10"
-                  >
-                    <Icon size={17} />
-                  </a>
-                ))}
+              <div className="mt-3 flex flex-wrap gap-3">
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-11 items-center gap-2 rounded-xl glass px-4 text-sm font-semibold text-white/85 transition-all hover:-translate-y-1 hover:bg-white/10 hover:text-white"
+                >
+                  <Linkedin size={17} className="text-[#0a66c2]" />
+                  Connect on LinkedIn
+                </a>
+                <a
+                  href={GITHUB_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="grid h-11 w-11 place-items-center rounded-xl glass transition-all hover:-translate-y-1 hover:bg-white/10"
+                >
+                  <Github size={17} />
+                </a>
               </div>
             </div>
           </motion.div>
