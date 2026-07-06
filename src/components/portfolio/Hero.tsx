@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
 
-const LINKEDIN_URL = "https://linkedin.com";
+const LINKEDIN_URL = "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382";
 const GITHUB_URL = "https://github.com/shivaprajval";
 
 export function Hero() {
