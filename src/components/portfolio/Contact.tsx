@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Send, Mail, MapPin, Phone, Github, Linkedin, Check } from "lucide-react";
 import { SectionHeader } from "./About";
 
-const LINKEDIN_URL = "https://linkedin.com";
+const LINKEDIN_URL = "https://www.linkedin.com/in/eediga-shiva-prajval-417b97382";
 const GITHUB_URL = "https://github.com/shivaprajval";
 
 export function Contact() {
